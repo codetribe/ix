@@ -1,0 +1,21 @@
+<%= link_to_function("Print", "javascript:print()") %><br />
+<b>Bill Id</b> : <%= @bill.id %>&nbsp;&nbsp;
+<b>Customer Name</b> : <%= @bill.customer_name %>&nbsp;&nbsp;
+<b>Status</b> : <%= @bill.status %>&nbsp;&nbsp;
+<b>Discount</b> : <%= number_to_currency @bill.discount, :unit=>"Rs " %>&nbsp;&nbsp;
+<b>Time</b> : <%= (@bill.created_at+ 3600*5.5).to_formatted_s(:short) %>
+<hr />
+<table border=1>
+	<tr>
+		<th>Product Name</th>
+		<th>Qty</th>
+		<th>Total</th>
+	</tr>
+	<%= render :partial => 'bill_list', :collection => @bill_lists %>
+	<tr>
+		<th></th>
+		<th>Total</th>
+		<th><%= number_to_currency @bill.total, :unit=>"Rs " %></th>
+	</tr>
+</table>
+

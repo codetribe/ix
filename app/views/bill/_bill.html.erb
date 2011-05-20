@@ -1,0 +1,7 @@
+<tr>
+	<td><%= bill.id %></td>
+	<td><%= bill.customer_name %></td>
+	<td><%= (bill.created_at+ 3600*5.5).to_formatted_s(:short) %></td>
+	<td><%= number_to_currency bill.total, :unit=>"Rs " %></td>
+	<td><%= link_to "View", :action => 'view', :id => bill.id %></td>
+</tr>

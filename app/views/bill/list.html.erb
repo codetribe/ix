@@ -1,0 +1,32 @@
+<div id="list_bill">
+	<div class="view_bill">
+	<%= form_tag({:action=>:list}, :method=>:get) do %>
+		<%= hidden_field_tag :search_by, 'date' %>
+		<%= date_select :date, 'select' %>
+		<%= submit_tag "View" %>
+	<% end %>
+	</div>
+	<div class="search_bill">
+	<%= form_tag({:action=>:list}, :method=>:get) do %>
+		<%= hidden_field_tag :search_by, 'search' %>
+		<%= text_field_tag :s %>
+		<%= submit_tag "Search" %>
+	<% end %>
+	</div>
+	<hr />
+	<% if @bills %>
+	<table border=1>
+		<tr>
+			<th>Bill No</th>
+			<th>Customer Name</th>
+			<th>Date</th>
+			<th>Total</th>
+			<th>Action</th>
+		</tr>
+		<%= render :partial => 'bill', :collection => @bills %>
+	</table>
+	<% end %>
+</div>
+
+
+

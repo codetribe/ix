@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_name: MyString
+  qty: 9.99
+  total: 9.99
+  bill_id: 1
+
+two:
+  product_name: MyString
+  qty: 9.99
+  total: 9.99
+  bill_id: 1

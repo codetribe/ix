@@ -1,0 +1,11 @@
+<tr id="<%= list.id %>">
+	<td class="item_space"><%= list.product_name %></td>
+	<td class="right"><%= list.qty %></td>
+	<td class="right"><%= list.total %></td>
+	<td>
+		<%= form_tag({:action=>:delete_entry}, {:remote=>true}) do %>
+			<%= hidden_field_tag :id, list.id %>
+		<%= image_submit_tag "cancel.png", :class=>"list_delete" %>
+		<% end %>
+	</td>
+</tr>

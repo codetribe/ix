@@ -1,0 +1,131 @@
+div.bill div{
+	position: absolute;
+}
+
+#hot_list{
+	left: 3px;
+	top: 5px;
+	width: 250px;
+	height: 95%;
+	//border: 1px solid blue; 
+	background-color: yellow;
+	overflow: scroll;
+}
+
+#entry{
+	left: 264px;
+	top: 5px;
+	width: 600px;
+	height: 60px;
+	z-index: 10;
+}
+
+#entry form{
+	display: inline;
+}
+
+#bill_list{
+	left: 264px;
+	top: 70px;
+	width: 600px;
+	height: 600px;
+	background-color: white;
+	overflow: scroll;
+}
+
+table {
+	width: 450px;
+	margin: 20px 20px 20px 20px;
+	padding: 5px;
+}
+table td img {
+		padding-left: 20px;
+} 
+.item_space {
+		width: 100%;
+}
+#more{
+	left: 875px;
+	top: 5px;
+	width: 400px;
+	height: 90%;
+	background-color: white;
+	border: 1px solid blue;
+	padding: 3px;
+}
+
+input.small_icon{
+	width: 30px;
+	height: 30px;
+}
+
+input.list_delete{
+	width: 20px;
+	height: 20px;
+}
+
+.right{
+	text-align: right;
+}
+
+#more div{
+	position: static;
+}
+
+hr {
+	margin-top: 20px;
+	float: left;
+	width: 100%;
+}
+	
+#list_bill {
+	width: 70%;
+	margin-left: 50px;
+	min-height: 300px;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid blue;
+}
+.view_bill {
+		float: left;
+		width: 400px;
+		margin: 10px;
+		padding: 3px;
+}
+.search_bill {
+		float: right;
+		width: 400px;
+		margin: 10px;
+		padding: 3px;
+}
+
+
+
+//auto complete	
+
+div.auto_complete {
+width: 350px;
+background: #fff ;
+}
+div.auto_complete ul {
+border:1px solid #888 ;
+margin:0;
+padding:0;
+width:100%;
+list-style-type:none;
+}
+div.auto_complete ul li {
+margin:0;
+padding:3px;
+background: white;
+}
+div.auto_complete ul li.selected {
+background-color: #ffb ;
+}
+div.auto_complete ul strong.highlight {
+color: #800 ;
+margin:0;
+padding:0;
+}
+

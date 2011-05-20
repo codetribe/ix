@@ -1,0 +1,3 @@
+page.remove @id
+page.assign 'total_amt', @total
+page.replace_html :total_amt, @total

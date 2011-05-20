@@ -1,0 +1,47 @@
+<div class="bill">
+	<div id="hot_list"></div>
+	<div id="entry">
+		<%= text_field_tag :name %>
+		<%= submit_tag "Add" %>
+		<%= image_tag "printer.png", :size=>"20x20" %>
+		<%= image_tag "cancel.png", :size=>"20x20" %><br />
+		<%= radio_button_tag :name, "Name" %>Name
+		<%= radio_button_tag :name, "Code" %>Code
+		
+	</div>
+	<div id="bill_list">
+		<table border= 1>
+			<tr>
+				<th class="item_space">Item</th>
+				<th>Qty</th>
+				<th>Total</th>
+				<th>Action</th>
+			</tr>
+			<tr>
+				<td class="item_space">vada</td>
+				<td>2</td>
+				<td>10</td>
+				<td><%= image_tag "cancel.png", :size=>"20x20" %></td>
+			</tr>
+			<tr>
+				<td class="item_space">poori</td>
+				<td>2</td>
+				<td>10</td>
+				<td><%= image_tag "cancel.png", :size=>"20x20" %></td>
+			</tr>
+			<tr>
+				<td class="item_space">samosa</td>
+				<td>2</td>
+				<td>10</td>
+				<td><%= image_tag "cancel.png", :size=>"20x20" %></td>
+			</tr>
+			<tr>
+				<td class="item_space">dosa</td>
+				<td>2</td>
+				<td>10</td>
+				<td><%= image_tag "cancel.png", :size=>"20x20" %></td>
+			</tr>
+		</table>
+	</div>
+	<div id="more"></div>
+</div>

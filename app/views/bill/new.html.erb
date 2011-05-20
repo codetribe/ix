@@ -1,0 +1,37 @@
+<div class="bill">
+	<div id="hot_list"></div>
+	<div id="entry">
+
+					<%= form_tag({:action=>:add_entry}, {:remote=>true}) do %>
+						<%= text_field_tag 'product_entry' %>
+							<div class="auto_complete" id="product_entry_auto_complete" name="auto_complete" style="display: block;"></div>
+							<%= auto_complete_field :product_entry, :frequency => 0.01, :url=>{:action=>'autocomplete_product_entry'} %>
+						<%= submit_tag "Add" %>
+					<% end %>
+					&nbsp; 
+					<%= link_to "Print", {:action => 'print', :id => @bill_id}, :remote => true, :method => :post %>
+					&nbsp; 
+					<%= form_tag(:action=>:cancel) do %>
+						<%= hidden_field_tag :id, @bill_id %>
+						<%= image_submit_tag 'cancel.png', :class=>'small_icon', :confirm=>'Do u wan to cancel the bill?' %>
+					<% end %>
+	</div>
+	<div id="bill_list">
+		<table border= 1 id="list">
+			<tr>
+				<th class="item_space">Item</th>
+				<th>Qty</th>
+				<th>Total</th>
+				<th>Action</th>
+			</tr>			
+		</table>
+	</div>
+	<div id="more">
+	
+		<div id="total">Total: <label id="total_amt"></label></div>
+		
+		<div id="received"><input type="text" name="amt_received" id="amt_received" onkeyup="update_balance();"/></div>
+		
+		<div id="balance">Balance: <label id="balance_amt"></label></div>
+	</div>
+</div>

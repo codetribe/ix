@@ -1,0 +1,4 @@
+page.insert_html :bottom, 'list', :partial=>'list', :object=>@bill_list
+page['product_entry'].value = ""
+page.replace_html :total_amt, @total
+page.assign 'total_amt', @total
